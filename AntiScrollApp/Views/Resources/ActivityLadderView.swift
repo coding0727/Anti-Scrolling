@@ -4,7 +4,7 @@ struct ActivityLadderView: View {
     @State private var selectedLevel = 0
 
     private let levels = ResourceContent.activityLevels
-    private let columns = [GridItem(.adaptive(minimum: 140), spacing: 10)]
+    private let columns = [GridItem(.flexible())]
 
     var body: some View {
         ScrollView {
@@ -20,7 +20,7 @@ struct ActivityLadderView: View {
                             .tag(level.id)
                     }
                 }
-                .frame(height: 330)
+                .frame(height: 390)
                 .modifier(PageTabViewStyleModifier())
                 .animation(.easeInOut(duration: 0.25), value: selectedLevel)
             }
@@ -35,10 +35,10 @@ struct ActivityLadderView: View {
     private var introText: some View {
         (
             Text("Breaking a habit requires offering your brain an alternative. Instead of asking \"What should I stop doing?\" ask ")
-                .foregroundColor(.secondary)
+                .foregroundColor(.brandSecondaryText)
             +
             Text("\"What would I like to do instead?\"")
-                .foregroundColor(.accentColor)
+                .foregroundColor(.brandPrimary)
                 .fontWeight(.semibold)
         )
         .font(.subheadline)
@@ -51,7 +51,7 @@ struct ActivityLadderView: View {
         VStack(spacing: 16) {
             Text("Difficulty Level")
                 .font(.caption.weight(.semibold))
-                .foregroundColor(.secondary)
+                .foregroundColor(.brandSecondaryText)
                 .frame(maxWidth: .infinity)
 
             HStack(spacing: 0) {
@@ -59,7 +59,7 @@ struct ActivityLadderView: View {
                     if index > 0 {
                         Image(systemName: "chevron.right")
                             .font(.caption2.weight(.semibold))
-                            .foregroundColor(.secondary.opacity(0.25))
+                            .foregroundColor(.brandSoft.opacity(0.7))
                             .frame(maxWidth: .infinity)
                     }
 
@@ -68,11 +68,11 @@ struct ActivityLadderView: View {
                     } label: {
                         Text("\(index + 1)")
                             .font(.subheadline.weight(.semibold))
-                            .foregroundColor(selectedLevel == level.id ? .white : .secondary)
+                            .foregroundColor(selectedLevel == level.id ? .white : .brandSecondaryText)
                             .frame(width: 36, height: 36)
                             .background(
                                 Circle()
-                                    .fill(selectedLevel == level.id ? Color.accentColor : Color.tertiaryFill)
+                                    .fill(selectedLevel == level.id ? Color.brandPrimary : Color.tertiaryFill)
                             )
                     }
                     .buttonStyle(.plain)
@@ -87,7 +87,7 @@ struct ActivityLadderView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: 16, style: .continuous)
-                .stroke(Color.secondary.opacity(0.12), lineWidth: 1)
+                .stroke(Color.brandBorder, lineWidth: 1)
         }
         .padding(.horizontal, 16)
     }
@@ -96,31 +96,32 @@ struct ActivityLadderView: View {
         VStack(alignment: .leading, spacing: 14) {
             Text("Level \(level.number)")
                 .font(.caption2.weight(.bold))
-                .foregroundColor(.accentColor)
+                .foregroundColor(.brandDeep)
                 .textCase(.uppercase)
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
-                .background(Color.accentColor.opacity(0.12), in: Capsule())
+                .background(Color.brandBorder.opacity(0.55), in: Capsule())
 
             Text(level.title)
                 .font(.title2.weight(.bold))
+                .foregroundColor(.brandText)
 
             Text(level.subtitle)
                 .font(.subheadline)
-                .foregroundColor(.secondary)
+                .foregroundColor(.brandSecondaryText)
                 .lineSpacing(3)
 
             LazyVGrid(columns: columns, alignment: .leading, spacing: 10) {
                 ForEach(level.activities, id: \.self) { activity in
                     Text(activity)
                         .font(.caption.weight(.medium))
-                        .foregroundColor(.primary)
+                        .foregroundColor(.brandText)
                         .padding(.horizontal, 12)
                         .frame(maxWidth: .infinity, minHeight: 38)
                         .background(Color.groupedBackground, in: Capsule())
                         .overlay {
                             Capsule()
-                                .stroke(Color.secondary.opacity(0.15), lineWidth: 1)
+                                .stroke(Color.brandBorder, lineWidth: 1)
                         }
                 }
             }
@@ -131,8 +132,8 @@ struct ActivityLadderView: View {
         .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
         .overlay {
             RoundedRectangle(cornerRadius: 22, style: .continuous)
-                .stroke(Color.secondary.opacity(0.1), lineWidth: 1)
+                .stroke(Color.brandBorder.opacity(0.8), lineWidth: 1)
         }
-        .shadow(color: .black.opacity(0.05), radius: 10, y: 4)
+        .shadow(color: Color.brandDeep.opacity(0.08), radius: 10, y: 4)
     }
 }

@@ -8,28 +8,29 @@ struct PostCardView: View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 10) {
                 Circle()
-                    .fill(Color.accentColor.opacity(0.2))
+                    .fill(Color.brandBorder.opacity(0.7))
                     .frame(width: 36, height: 36)
                     .overlay(
                         Image(systemName: "leaf.fill")
-                            .foregroundColor(.accentColor)
+                            .foregroundColor(.brandDeep)
                             .font(.system(size: 16))
                     )
                 VStack(alignment: .leading, spacing: 2) {
                     Text(post.author)
                         .font(.subheadline.weight(.semibold))
+                        .foregroundColor(.brandText)
                     Text("\(post.minutesAgo)m ago")
                         .font(.caption)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.brandSecondaryText)
                 }
                 Spacer()
                 Image(systemName: "ellipsis")
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.brandMuted)
             }
 
             Text(post.message)
                 .font(.title3.weight(.medium))
-                .foregroundColor(.primary)
+                .foregroundColor(.brandText)
                 .padding(.vertical, 24)
                 .frame(maxWidth: .infinity)
                 .multilineTextAlignment(.center)
@@ -51,6 +52,11 @@ struct PostCardView: View {
         .padding()
         .background(Color.secondaryGroupedBackground)
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .stroke(Color.brandBorder.opacity(0.8), lineWidth: 1)
+        }
+        .shadow(color: Color.brandDeep.opacity(0.05), radius: 8, y: 3)
     }
 
     @ViewBuilder
@@ -61,7 +67,7 @@ struct PostCardView: View {
                 Text(label)
                     .font(.footnote)
             }
-            .foregroundColor(.secondary)
+            .foregroundColor(.brandSecondaryText)
             .frame(maxWidth: .infinity)
         }
     }

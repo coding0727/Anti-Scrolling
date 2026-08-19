@@ -16,6 +16,8 @@ struct ProfileSetupView: View {
                         .lineLimit(3...6)
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(Color.groupedBackground)
             .navigationTitle("Set up your profile")
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {

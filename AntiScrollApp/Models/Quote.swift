@@ -5,7 +5,7 @@ enum Quote {
     static let all: [String] = [
         // Mindful Awareness & Intentionality
         "Notice your breath right now—that's where real life is happening.",
-        "Is this video adding value to your day, or just passing time?",
+        "Are the reels adding value to your day, or just passing time?",
         "Pause and check in: What feeling are you trying to satisfy right now?",
         "Scrolling gives temporary distraction, not genuine rest.",
         "Ask yourself: Will I remember what I'm watching five minutes from now?",
@@ -62,6 +62,40 @@ enum Quote {
         "Give yourself permission to be unproductive without digital distraction.",
         "A calm mind starts with reducing incoming noise.",
         "Put the screen away and let your thoughts wander freely.",
-        "There is no rush, but when you are ready, get back to what you mean to do."
+        "There is no rush, but when you are ready, get back to what you mean to do.",
+        
+        // Urgency & FOMO Relief
+        "There is no one I need to connect with right now—meaningful relationships can wait for intentional time.",
+        "The world can pause for twenty minutes without your supervision.",
+        "Nothing on this screen is so urgent that it requires your immediate peace of mind.",
+        "You don't owe the internet real-time access to your brain.",
+        "Missing out on a trend is better than missing out on your present life.",
+        "The urge to check is just a impulse—let it peak and pass without acting on it.",
+        "Whatever news or updates are happening will still be there when you're ready.",
+        "Disconnecting for a moment isn't selfish; it's self-preservation.",
+        "Not every notification is a call to action.",
+        "Your availability is yours to grant, not for an app to claim.",
+
+        // Presence & Single-Tasking
+        "Be fully where your feet are right now.",
+        "Give whatever you are doing your undivided presence.",
+        "Multi-tasking with a screen is just dividing your capacity to experience life.",
+        "Single-tasking is a modern superpower—reclaim it.",
+        "Real life doesn't happen in the background while you look down.",
+
+        // Boundary Setting & Digital Quiet
+        "You don't need to be informed about everything, all the time.",
+        "Protect your quiet hours like you protect your sleep.",
+        "Quiet moments are empty spaces to be enjoyed, not gaps that need filling.",
+        "Silence on your device creates clarity in your thoughts.",
+        "Reclaim the pleasure of being unreachable for a little while.",
+
+        // Intentional Energy
+        "Reserve your cognitive energy for people and projects that matter.",
+        "Consuming less content leaves more room for creating your own life.",
+        "Your mind needs empty space to process, reflect, and grow.",
+        "Put down the glass screen and step back into the physical world.",
+        "Choose depth over stream-of-consciousness scrolling.",
+        
     ]
 }

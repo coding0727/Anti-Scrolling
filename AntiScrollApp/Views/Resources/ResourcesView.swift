@@ -9,17 +9,17 @@ private struct ResourceHubCard: View {
         HStack(spacing: 16) {
             Image(systemName: icon)
                 .font(.title2)
-                .foregroundColor(.accentColor)
+                .foregroundColor(.brandDeep)
                 .frame(width: 44, height: 44)
-                .background(Color.accentColor.opacity(0.12), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                .background(Color.brandBorder.opacity(0.65), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(title)
                     .font(.headline)
-                    .foregroundColor(.primary)
+                    .foregroundColor(.brandText)
                 Text(subtitle)
                     .font(.subheadline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.brandSecondaryText)
                     .lineLimit(2)
             }
 
@@ -27,11 +27,16 @@ private struct ResourceHubCard: View {
 
             Image(systemName: "chevron.right")
                 .font(.subheadline.weight(.semibold))
-                .foregroundColor(.secondary.opacity(0.6))
+                .foregroundColor(.brandMuted)
         }
         .padding(16)
         .background(Color.secondaryGroupedBackground)
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .stroke(Color.brandBorder.opacity(0.8), lineWidth: 1)
+        }
+        .shadow(color: Color.brandDeep.opacity(0.05), radius: 8, y: 3)
     }
 }
 

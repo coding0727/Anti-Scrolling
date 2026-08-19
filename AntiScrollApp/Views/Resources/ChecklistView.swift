@@ -21,7 +21,7 @@ struct ChecklistView: View {
 
             Text("\(checklistManager.completedCount) of \(checklistManager.totalCount) complete")
                 .font(.caption)
-                .foregroundColor(.secondary)
+                .foregroundColor(.brandSecondaryText)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
                 .padding(.bottom, 8)
@@ -35,12 +35,12 @@ struct ChecklistView: View {
                             HStack(alignment: .top, spacing: 12) {
                                 Image(systemName: checklistManager.isCompleted(item.id) ? "checkmark.square.fill" : "square")
                                     .font(.title3)
-                                    .foregroundColor(checklistManager.isCompleted(item.id) ? .accentColor : .secondary)
+                                    .foregroundColor(checklistManager.isCompleted(item.id) ? .brandPrimary : .brandMuted)
                                     .accessibilityHidden(true)
 
                                 Text(item.title)
                                     .font(.body)
-                                    .foregroundColor(.primary)
+                                    .foregroundColor(.brandText)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                             }
                             .contentShape(Rectangle())
@@ -53,7 +53,10 @@ struct ChecklistView: View {
                 }
             }
             .applyGroupedListStyle()
+            .scrollContentBackground(.hidden)
+            .background(Color.groupedBackground)
         }
+        .background(Color.groupedBackground)
         .navigationTitle("Reduce the Pull")
         .inlineNavigationTitle()
     }

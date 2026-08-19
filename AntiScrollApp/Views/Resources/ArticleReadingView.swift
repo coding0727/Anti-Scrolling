@@ -6,16 +6,18 @@ struct ArticleReadingView: View {
             VStack(alignment: .leading, spacing: 32) {
                 Text(ResourceContent.articleTitle)
                     .font(.title.weight(.bold))
+                    .foregroundColor(.brandText)
                     .padding(.bottom, 8)
 
                 ForEach(ResourceContent.articleSections) { section in
                     VStack(alignment: .leading, spacing: 12) {
                         Text(section.title)
                             .font(.title2.weight(.semibold))
+                            .foregroundColor(.brandDeep)
 
                         Text(section.body)
                             .font(.body)
-                            .foregroundColor(.primary)
+                            .foregroundColor(.brandText)
                             .lineSpacing(6)
                     }
                 }

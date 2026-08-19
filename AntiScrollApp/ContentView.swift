@@ -19,6 +19,8 @@ struct ContentView: View {
                     Label("Profile", systemImage: "person.circle")
                 }
         }
+        .tint(.brandPrimary)
+        .foregroundStyle(Color.brandText)
         .environmentObject(profileManager)
         .environmentObject(checklistManager)
     }

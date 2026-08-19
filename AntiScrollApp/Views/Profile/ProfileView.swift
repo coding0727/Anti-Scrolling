@@ -10,16 +10,21 @@ struct ProfileView: View {
                 List {
                     Section("Name") {
                         Text(profileManager.name)
+                            .foregroundColor(.brandText)
                     }
                     Section("Your goal") {
                         Text(profileManager.goal)
+                            .foregroundColor(.brandText)
                     }
                     Section {
                         Button("Edit profile") {
                             showResetConfirm = true
                         }
+                        .foregroundColor(.brandDeep)
                     }
                 }
+                .scrollContentBackground(.hidden)
+                .background(Color.groupedBackground)
                 .navigationTitle("Profile")
                 .confirmationDialog("Edit your profile?", isPresented: $showResetConfirm) {
                     Button("Edit", role: .destructive) {
