@@ -2,6 +2,7 @@ import SwiftUI
 
 struct FeedView: View {
     @State private var posts: [Post] = []
+    @State private var remainingQuotes: [String] = []
     @State private var toast: ToastMessage?
     private let pageSize = 20
 
@@ -31,12 +32,26 @@ struct FeedView: View {
         }
     }
 
-    /// Appends the next page of posts, cycling through Quote.all indefinitely.
+    /// Appends randomized quotes, reshuffling after every complete pass.
     private func loadMore() {
-        let quotes = Quote.all
         let startIndex = posts.count
-        let newPosts = (0..<pageSize).map { offset -> Post in
-            let quote = quotes[(startIndex + offset) % quotes.count]
+        var nextQuotes: [String] = []
+
+        while nextQuotes.count < pageSize {
+            if remainingQuotes.isEmpty {
+                remainingQuotes = Quote.all.shuffled()
+
+                if remainingQuotes.first == posts.last?.message, remainingQuotes.count > 1 {
+                    remainingQuotes.swapAt(0, 1)
+                }
+            }
+
+            let count = min(pageSize - nextQuotes.count, remainingQuotes.count)
+            nextQuotes.append(contentsOf: remainingQuotes.prefix(count))
+            remainingQuotes.removeFirst(count)
+        }
+
+        let newPosts = nextQuotes.enumerated().map { offset, quote -> Post in
             return Post(message: quote, minutesAgo: (startIndex + offset) + 1)
         }
         posts.append(contentsOf: newPosts)
