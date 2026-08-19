@@ -1,24 +1,23 @@
-//
-//  ContentView.swift
-//  AntiScrollApp
-//
-//  Created by Phoebe Zhong on 8/12/26.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    @StateObject private var profileManager = ProfileManager()
 
-#Preview {
-    ContentView()
+    var body: some View {
+        TabView {
+            FeedView()
+                .tabItem {
+                    Label("Feed", systemImage: "square.stack")
+                }
+            ResourcesView()
+                .tabItem {
+                    Label("Resources", systemImage: "book")
+                }
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
+        }
+        .environmentObject(profileManager)
+    }
 }
