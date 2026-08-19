@@ -22,7 +22,7 @@ struct FeedView: View {
                 }
                 .padding()
             }
-            .background(Color(.systemGroupedBackground))
+            .background(Color.groupedBackground)
             .navigationTitle("Feed")
             .onAppear {
                 if posts.isEmpty { loadMore() }

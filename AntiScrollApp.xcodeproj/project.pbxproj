@@ -6,17 +6,48 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		04817E1D302D884E0055458C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E0D302D884E0055458C /* Quote.swift */; };
+		04817E1E302D884E0055458C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E0C302D884E0055458C /* Post.swift */; };
+		04817E1F302D884E0055458C /* ProfileSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E14302D884E0055458C /* ProfileSetupView.swift */; };
+		04817E20302D884E0055458C /* ResourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E17302D884E0055458C /* ResourcesView.swift */; };
+		04817E21302D884E0055458C /* AntiScrollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E1A302D884E0055458C /* AntiScrollApp.swift */; };
+		04817E22302D884E0055458C /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E0A302D884E0055458C /* ProfileManager.swift */; };
+		04817E23302D884E0055458C /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E0F302D884E0055458C /* ToastModifier.swift */; };
+		04817E24302D884E0055458C /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E11302D884E0055458C /* FeedView.swift */; };
+		04817E25302D884E0055458C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E1B302D884E0055458C /* ContentView.swift */; };
+		04817E26302D884E0055458C /* PostCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E12302D884E0055458C /* PostCardView.swift */; };
+		04817E27302D884E0055458C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E15302D884E0055458C /* ProfileView.swift */; };
+		04817E28302D884E0055458C /* ResourceContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E28302D884E0055458D /* ResourceContent.swift */; };
+		04817E29302D884E0055458C /* ChecklistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E29302D884E0055458D /* ChecklistManager.swift */; };
+		04817E2A302D884E0055458C /* ArticleReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E2A302D884E0055458D /* ArticleReadingView.swift */; };
+		04817E2B302D884E0055458C /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E2B302D884E0055458D /* ChecklistView.swift */; };
+		04817E2C302D884E0055458C /* ActivityLadderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E2C302D884E0055458D /* ActivityLadderView.swift */; };
+		04817E2D302D884E0055458C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E2D302D884E0055458D /* AppColors.swift */; };
+		04817E2E302D884E0055458C /* NavigationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817E2E302D884E0055458D /* NavigationStyle.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		04817DDB302D86D70055458C /* AntiScrollApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AntiScrollApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04817E0A302D884E0055458C /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		04817E0C302D884E0055458C /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		04817E0D302D884E0055458C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		04817E0F302D884E0055458C /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
+		04817E11302D884E0055458C /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		04817E12302D884E0055458C /* PostCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCardView.swift; sourceTree = "<group>"; };
+		04817E14302D884E0055458C /* ProfileSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetupView.swift; sourceTree = "<group>"; };
+		04817E15302D884E0055458C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		04817E17302D884E0055458C /* ResourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesView.swift; sourceTree = "<group>"; };
+		04817E1A302D884E0055458C /* AntiScrollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntiScrollApp.swift; sourceTree = "<group>"; };
+		04817E1B302D884E0055458C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		04817E28302D884E0055458D /* ResourceContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceContent.swift; sourceTree = "<group>"; };
+		04817E29302D884E0055458D /* ChecklistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistManager.swift; sourceTree = "<group>"; };
+		04817E2A302D884E0055458D /* ArticleReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleReadingView.swift; sourceTree = "<group>"; };
+		04817E2B302D884E0055458D /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
+		04817E2C302D884E0055458D /* ActivityLadderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLadderView.swift; sourceTree = "<group>"; };
+		04817E2D302D884E0055458D /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		04817E2E302D884E0055458D /* NavigationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		04817DDD302D86D70055458C /* AntiScrollApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AntiScrollApp;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		04817DD8302D86D70055458C /* Frameworks */ = {
@@ -32,7 +63,7 @@
 		04817DD2302D86D70055458C = {
 			isa = PBXGroup;
 			children = (
-				04817DDD302D86D70055458C /* AntiScrollApp */,
+				04817E1C302D884E0055458C /* AntiScrollApp */,
 				04817DDC302D86D70055458C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +74,87 @@
 				04817DDB302D86D70055458C /* AntiScrollApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		04817E0B302D884E0055458C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				04817E0A302D884E0055458C /* ProfileManager.swift */,
+				04817E29302D884E0055458D /* ChecklistManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		04817E0E302D884E0055458C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04817E0C302D884E0055458C /* Post.swift */,
+				04817E0D302D884E0055458C /* Quote.swift */,
+				04817E28302D884E0055458D /* ResourceContent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04817E10302D884E0055458C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				04817E0F302D884E0055458C /* ToastModifier.swift */,
+				04817E2D302D884E0055458D /* AppColors.swift */,
+				04817E2E302D884E0055458D /* NavigationStyle.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		04817E13302D884E0055458C /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				04817E11302D884E0055458C /* FeedView.swift */,
+				04817E12302D884E0055458C /* PostCardView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		04817E16302D884E0055458C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				04817E14302D884E0055458C /* ProfileSetupView.swift */,
+				04817E15302D884E0055458C /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		04817E18302D884E0055458C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04817E17302D884E0055458C /* ResourcesView.swift */,
+				04817E2A302D884E0055458D /* ArticleReadingView.swift */,
+				04817E2B302D884E0055458D /* ChecklistView.swift */,
+				04817E2C302D884E0055458D /* ActivityLadderView.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04817E19302D884E0055458C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04817E13302D884E0055458C /* Feed */,
+				04817E16302D884E0055458C /* Profile */,
+				04817E18302D884E0055458C /* Resources */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04817E1C302D884E0055458C /* AntiScrollApp */ = {
+			isa = PBXGroup;
+			children = (
+				04817E0B302D884E0055458C /* Managers */,
+				04817E0E302D884E0055458C /* Models */,
+				04817E10302D884E0055458C /* Shared */,
+				04817E19302D884E0055458C /* Views */,
+				04817E1A302D884E0055458C /* AntiScrollApp.swift */,
+				04817E1B302D884E0055458C /* ContentView.swift */,
+			);
+			path = AntiScrollApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +171,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				04817DDD302D86D70055458C /* AntiScrollApp */,
 			);
 			name = AntiScrollApp;
 			packageProductDependencies = (
@@ -119,6 +228,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04817E1D302D884E0055458C /* Quote.swift in Sources */,
+				04817E1E302D884E0055458C /* Post.swift in Sources */,
+				04817E1F302D884E0055458C /* ProfileSetupView.swift in Sources */,
+				04817E20302D884E0055458C /* ResourcesView.swift in Sources */,
+				04817E21302D884E0055458C /* AntiScrollApp.swift in Sources */,
+				04817E22302D884E0055458C /* ProfileManager.swift in Sources */,
+				04817E23302D884E0055458C /* ToastModifier.swift in Sources */,
+				04817E24302D884E0055458C /* FeedView.swift in Sources */,
+				04817E25302D884E0055458C /* ContentView.swift in Sources */,
+				04817E26302D884E0055458C /* PostCardView.swift in Sources */,
+				04817E27302D884E0055458C /* ProfileView.swift in Sources */,
+				04817E28302D884E0055458C /* ResourceContent.swift in Sources */,
+				04817E29302D884E0055458C /* ChecklistManager.swift in Sources */,
+				04817E2A302D884E0055458C /* ArticleReadingView.swift in Sources */,
+				04817E2B302D884E0055458C /* ChecklistView.swift in Sources */,
+				04817E2C302D884E0055458C /* ActivityLadderView.swift in Sources */,
+				04817E2D302D884E0055458C /* AppColors.swift in Sources */,
+				04817E2E302D884E0055458C /* NavigationStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

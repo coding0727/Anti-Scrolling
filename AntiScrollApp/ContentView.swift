@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var profileManager = ProfileManager()
+    @StateObject private var checklistManager = ChecklistManager()
 
     var body: some View {
         TabView {
@@ -19,5 +20,6 @@ struct ContentView: View {
                 }
         }
         .environmentObject(profileManager)
+        .environmentObject(checklistManager)
     }
 }

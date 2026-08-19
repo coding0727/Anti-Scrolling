@@ -1,39 +1,81 @@
 import SwiftUI
 
-struct ResourceItem: Identifiable {
-    let id = UUID()
-    let title: String
-    let description: String
+private struct ResourceHubCard: View {
     let icon: String
+    let title: String
+    let subtitle: String
+
+    var body: some View {
+        HStack(spacing: 16) {
+            Image(systemName: icon)
+                .font(.title2)
+                .foregroundColor(.accentColor)
+                .frame(width: 44, height: 44)
+                .background(Color.accentColor.opacity(0.12), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(title)
+                    .font(.headline)
+                    .foregroundColor(.primary)
+                Text(subtitle)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .lineLimit(2)
+            }
+
+            Spacer(minLength: 0)
+
+            Image(systemName: "chevron.right")
+                .font(.subheadline.weight(.semibold))
+                .foregroundColor(.secondary.opacity(0.6))
+        }
+        .padding(16)
+        .background(Color.secondaryGroupedBackground)
+        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+    }
 }
 
 struct ResourcesView: View {
-    private let items: [ResourceItem] = [
-        ResourceItem(title: "Set app time limits", description: "Use Screen Time in Settings to cap social apps to a fixed daily budget.", icon: "hourglass"),
-        ResourceItem(title: "Turn off notifications", description: "Silence non-essential push notifications so you check apps on your terms.", icon: "bell.slash"),
-        ResourceItem(title: "Grayscale your phone", description: "Removing color makes feeds less rewarding to look at.", icon: "circle.lefthalf.filled"),
-        ResourceItem(title: "Keep your phone out of reach", description: "Charge it in another room while you work or sleep.", icon: "bed.double"),
-        ResourceItem(title: "Replace the habit", description: "Pick one small action, like a short walk or a page of a book, for whenever you'd normally scroll.", icon: "arrow.triangle.2.circlepath")
-    ]
-
     var body: some View {
         NavigationStack {
-            List(items) { item in
-                HStack(alignment: .top, spacing: 14) {
-                    Image(systemName: item.icon)
-                        .font(.title3)
-                        .foregroundColor(.accentColor)
-                        .frame(width: 28)
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(item.title)
-                            .font(.headline)
-                        Text(item.description)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
+            ScrollView {
+                LazyVStack(spacing: 16) {
+                    NavigationLink {
+                        ArticleReadingView()
+                    } label: {
+                        ResourceHubCard(
+                            icon: "book.pages",
+                            title: "Why We Scroll",
+                            subtitle: "Understanding the habit and its cost"
+                        )
                     }
+                    .buttonStyle(.plain)
+
+                    NavigationLink {
+                        ChecklistView()
+                    } label: {
+                        ResourceHubCard(
+                            icon: "checklist",
+                            title: "Reduce the Pull",
+                            subtitle: "11 tactical tweaks across 3 areas"
+                        )
+                    }
+                    .buttonStyle(.plain)
+
+                    NavigationLink {
+                        ActivityLadderView()
+                    } label: {
+                        ResourceHubCard(
+                            icon: "stairs",
+                            title: "Replace the Habit",
+                            subtitle: "4 levels of habit replacements"
+                        )
+                    }
+                    .buttonStyle(.plain)
                 }
-                .padding(.vertical, 6)
+                .padding()
             }
+            .background(Color.groupedBackground)
             .navigationTitle("Resources")
         }
     }

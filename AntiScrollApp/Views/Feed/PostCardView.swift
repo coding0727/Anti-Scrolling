@@ -49,7 +49,7 @@ struct PostCardView: View {
             }
         }
         .padding()
-        .background(Color(.secondarySystemGroupedBackground))
+        .background(Color.secondaryGroupedBackground)
         .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 
